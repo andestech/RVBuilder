@@ -549,45 +549,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#connection-configurations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Connection Configurations
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Connection Configurations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#iceman" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ICEman
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#linker-script-generator-ldsag" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -807,10 +768,10 @@ For more information, see <a href="https://www.andestech.com/en/products-solutio
 </ul>
 </li>
 </ul>
-<p>Examples of chip profiles within the RVBuilder Package: ADP-AE250-N25F, ADP-AE350-NX45-RVB, ADP-AE350-AX46MPV-SMP and more. </p>
+<p>Examples of chip profiles within the RVBuilder Package include ADP-AE250-N25F, ADP-AE350-NX45-RVB, ADP-AE350-AX46MPV-SMP and more. </p>
 <h3 id="toolchains">Toolchains</h3>
-<p>The RVBuilder package provides two toolchains, <code>nds32le-elf-newlib-v5</code> and <code>nds64le-elf-newlib-v5</code>, for software development on Andes RISC-V targets.</p>
-<p>The toolchain naming convention denotes the following:</p>
+<p>The RVBuilder package provides two toolchains, <code>nds32le-elf-newlib-v5</code> and <code>nds64le-elf-newlib-v5</code>, for software development on Andes RISC-V targets. Both toolchains are based on GNU and LLVM, and support the standard options of GCC, as, and ld, as well as clang and lld. They support compiler, assembler, and linker options specialized for Andes RISC-V targets to enable features such as performance tuning and code size optimization. For details on these Andes-specific compiler, assembler, and linker options, refer to <a href="../ref/Andes_Programming_Guide_for_ISA_V5_PG012_V3.5.pdf">Andes Programming Guide</a>.</p>
+<p>Take note of the denotations in toolchain naming:</p>
 <ul>
 <li><code>nds32</code>/<code>nds64</code> indicates the supported processor architecture. <code>nds32</code> for 32-bit Andes RISC-V processors and <code>nds64</code> for 64-bit Andes RISC-V processors.</li>
 <li><code>le</code> indicates that the supported target endianness is little-endian.</li>
@@ -819,11 +780,9 @@ For more information, see <a href="https://www.andestech.com/en/products-solutio
 <li><code>v5</code> indicates that the toolchain targets the AndeStar™ Instruction Set Architecture (ISA) V5 implementation.</li>
 </ul>
 <p>The appropriate toolchain for a specific Andes target is predefined in the associated chip profile and does not require manual selection. However, for RVBuilder projects that use a custom Makefile, you must update the target-related settings and toolchain paths in <code>tasks.json</code> after switching to a target (chip profile) with a different architecture (e.g. changing from 32-bit to 64-bit). The toolchain executable path is located at <code>${RVBUILDER_PACKAGE_ROOT}/toolchains/${TOOLCHAIN}/bin/</code>. </p>
-<h3 id="connection-configurations">Connection Configurations</h3>
-<p>AICE, Andes QEMU, maverick, GDB server </p>
-<h4 id="iceman">ICEman</h4>
-<h4 id="_1"></h4>
 <h3 id="linker-script-generator-ldsag">Linker Script Generator (LdSaG)</h3>
+<p>LdSaG is a tool that generates a linker script from a simplified image layout and memory mapping description file written in Andes Scattering-and-Gathering (SaG) format. Instead of writing complex GNU linker scripts, you can use the SaG syntax to describe the program image layout and memory mapping for Andes RISC-V targets. With the SaG-formatted description file (<code>*.sag</code>), the LdSaG tool generates a corresponding linker script.</p>
+<p>For details about the SaG syntax and the command-line options for the LdSaG tool, see the chapter <em>Linker Script Generation</em> in <a href="../ref/Andes_Programming_Guide_for_ISA_V5_PG012_V3.5.pdf">Andes Programming Guide</a>. </p>
 <h3 id="flash-burners">Flash Burners</h3>
 
 
