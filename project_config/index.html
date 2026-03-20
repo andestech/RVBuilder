@@ -667,7 +667,7 @@
 
   <h1>Configure a Project</h1>
 
-<p>RVBuilder provides a graphical user interface (GUI) for configuring target and build settings for a project. The configuration interface can be opened by right-clicking the project in the <strong>Explorer</strong> view and selecting "RVBuilder: Build Project" from the drop-down menu.</p>
+<p>RVBuilder provides a graphical user interface (GUI) for configuring target and build settings for a project. The configuration interface can be opened by right-clicking the project in the <strong>Explorer</strong> view and selecting "RVBuilder: Settings" from the drop-down menu.</p>
 <h2 id="target-configuration">Target Configuration</h2>
 <p><img alt="Target Configuration" src="../images/project_target_config.png" /></p>
 <table>
@@ -692,7 +692,7 @@
 <tr>
 <td><strong>Connection</strong></td>
 <td>Specifies the target connection type used for development. Supported connection types include <strong>AICE</strong>, <strong>Andes QEMU</strong>, <strong>Maverick</strong>, and <strong>GDB server</strong>. For details of the connection types, see <strong><a href="../targets/#target-connection">Target Connection</a></strong>.</td>
-<td><br> For local target connections, additional options can be specified in <strong>Misc Arguments</strong> field. See <a href="../ref/Andes_QEMU_Emulator_Reference_Manual_UM284_V1.2.pdf">Andes QEMU Emulator Reference Manual</a> and <a href="../ref/Andes_ICE_Management_Software_UM067_V4.1.pdf">Andes ICE Management Software (ICEman) User Manual</a> for available options for Andes QEMU or AICE connection.<br><br>For AICE connection, also take note of the following:<br>1. RVBuilder automatically detects and displays the plugged-in ICE device along with its position. If multiple local ICE devices are detected, they are listed together for selection.<br>2. When using an AICE-MINI+, AICE-T2 or AICE MICRO ICE box, you must specify the debug interface of the target board. Available options include<br>&bull; <strong>Auto</strong>: Tries the JDP mode first. If it fails, use the SDP mode.<br>&bull; <strong>SDP (2-wire)</strong>: Uses the SDP mode (with 2-wire debug interface).<br>&bull; <strong>JDP (4-wire)</strong>: Uses the JDP mode (with 4-wire debug interface)</td>
+<td><br> For local target connections, additional options can be specified in the <strong>Misc Arguments</strong> field. See <a href="../ref/Andes_QEMU_Emulator_Reference_Manual_UM284_V1.2.pdf">Andes QEMU Emulator Reference Manual</a> and <a href="../ref/Andes_ICE_Management_Software_UM067_V4.1.pdf">Andes ICE Management Software (ICEman) User Manual</a> for available options for Andes QEMU or AICE connection.<br><br>For AICE connection, also take note of the following:<br>1. RVBuilder automatically detects and displays the plugged-in ICE device along with its position. If multiple local ICE devices are detected, they are listed together for selection.<br>2. When using an AICE-MINI+, AICE-T2 or AICE-MICRO ICE box, you must specify the debug interface of the target board. Available options include<br>&bull; <strong>Auto</strong>: Tries the JDP mode first. If it fails, use the SDP mode.<br>&bull; <strong>SDP (2-wire)</strong>: Uses the SDP mode (with 2-wire debug interface).<br>&bull; <strong>JDP (4-wire)</strong>: Uses the JDP mode (with 4-wire debug interface)</td>
 </tr>
 <tr>
 <td><strong>Toolchain</strong></td>
@@ -708,7 +708,7 @@
     <img alt="Use RVBuilder-Generated Makefile" src="../images/RVBuilder_makefile_option.png" /></li>
 </ul>
 <h2 id="build-settings">Build Settings</h2>
-<p>For a project configured to use the RVBuilder-generated Makefile, RVBuilder displays the build settings in the <strong>Project Settings</strong> interface. You can configure the compiler, linker, assembler, GNU bin utilities (NM, Readelf, Objdump, Objcopy, Size), and linker script generator (LdSaG) directly in <strong>Project Settings</strong>.</p>
+<p>For a project configured to use the RVBuilder-generated Makefile, RVBuilder displays the build settings in the <strong>Project Settings</strong> interface. You can configure the compiler, linker, assembler, GNU Binutils (NM, Readelf, Objdump, Objcopy, Size), and linker script generator (LdSaG) directly in <strong>Project Settings</strong>.</p>
 <p>For most build tools or utilities in the <strong>Build Settings</strong> section, their configuration interface includes:</p>
 <ul>
 <li><strong>Preview of flags</strong>: Displays the complete command-line options currently applied to the tool or utility.</li>

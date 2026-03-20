@@ -748,7 +748,7 @@
 <li>In the <strong>Project Settings</strong>, select a chip profile and a connection type that correspond to your target system and target environment.</li>
 <li>Ensure the option "Use RVBuilder-Generated Makefile" is checked and specify respective build settings as needed.  </li>
 <li>Click the <strong>Build</strong> button to build the application. </li>
-<li>Verify the program executable <code>demo-plic-vector-V5.adx</code> is generated in the project. </li>
+<li>Verify the program executable <code>demo-plic-novector-V5.adx</code> is generated in the project. </li>
 </ol>
 <h3 id="run-or-debug-the-project">Run or Debug the Project</h3>
 <ol>
@@ -794,8 +794,8 @@
 <td>&bull; <code>AE350</code>: Specifies AE350 as the target platform.</td>
 </tr>
 <tr>
-<td><code>USE_CACH</code></td>
-<td>&bull; <code>0</code>: disable the cache and its operation.<br>&bull; <code>CCTL</code>: Uses Andes CCTL extension when supported.<br>&bull; <code>CMO</code>: Uses RISC-V CMO extension when supported.</td>
+<td><code>USE_CACHE</code></td>
+<td>&bull; <code>0</code>: Disables the cache and its operation.<br>&bull; <code>CCTL</code>: Uses Andes CCTL extension when supported.<br>&bull; <code>CMO</code>: Uses RISC-V CMO extension when supported.</td>
 </tr>
 <tr>
 <td><code>V</code></td>
@@ -813,7 +813,7 @@
 </table>
 </li>
 <li>
-<p>Search for <code>cwd</code> and set the path to the build directory, which is where the Makefile for your target locates (i.e., <code>${PROJECT_ROOT}/Demo/[V5|V5-CLIC|V5-SMP]/</code>).</p>
+<p>Search for <code>cwd</code> and set the path to the build directory, which is where the Makefile for your target is located (i.e., <code>${PROJECT_ROOT}/Demo/[V5|V5-CLIC|V5-SMP]/</code>).</p>
 </li>
 <li>
 <p>Update all toolchain executable paths in the file according to the toolchain to be used for your target. The path is </p>
@@ -827,7 +827,7 @@
 <h3 id="configure-debug-settings-in-launchjson">Configure Debug Settings in <code>launch.json</code></h3>
 <ol>
 <li>Open <code>launch.json</code> under <code>${PROJECT_ROOT}/.vscode</code>.</li>
-<li>Search for <code>program</code> and set the program executable path to <code>${workspacefolder}/Demo/[V5|V5-CLIC|V5-SMP]/Demo.elf</code>.</li>
+<li>Search for <code>program</code> and set the program executable path to <code>${workspaceFolder}/Demo/[V5|V5-CLIC|V5-SMP]/Demo.elf</code>.</li>
 <li>(For SMP targets only) Add GDB command <code>thread apply all set $pc=_start</code> to the <code>setupCommands</code> section. </li>
 </ol>
 <p><img alt="FreeRTOS launch.json" src="../images/freertos_launch_config.png" /></p>
@@ -836,7 +836,7 @@
 <li>Right-click the project in the <strong>Explorer</strong> view and select "RVBuilder: Build Project".</li>
 <li>In the <strong>Project Settings</strong>, select a chip profile and a connection type that correspond to your target system and target environment. As the Full demo is not supported on simulator targets, make sure not to select "Andes QEMU" as its connection type. </li>
 <li>Click the <strong>Build</strong> button to build the application. </li>
-<li>Verify the program executable <code>Demo.elf</code> is generated in the build directory <code>${workspacefolder}/Demo/[V5|V5-CLIC|V5-SMP]</code>. </li>
+<li>Verify the program executable <code>Demo.elf</code> is generated in the build directory <code>${workspaceFolder}/Demo/[V5|V5-CLIC|V5-SMP]</code>. </li>
 </ol>
 <h3 id="run-or-debug-the-project_1">Run or Debug the Project</h3>
 <ol>
