@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://obscuredarling.github.io/qwpo4578/project_debug/">
+        <link rel="canonical" href="https://obscuredarling.github.io/qwpo4578/mcp_for_AI/">
       
       
-        <link rel="prev" href="../project_flash/">
+        <link rel="prev" href="../demo/">
       
-      
-        <link rel="next" href="../demo/">
       
       
         
@@ -25,7 +23,7 @@
     
     
       
-        <title>Debug an Application - RVBuilder Documentation</title>
+        <title>Use RVBuilder with AI Agents - RVBuilder Documentation</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#before-debugging" class="md-skip">
+        <a href="#github-copilot-chat" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Debug an Application
+              Use RVBuilder with AI Agents
             
           </span>
         </div>
@@ -480,35 +478,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Debug an Application
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../project_debug/" class="md-nav__link">
         
   
   
@@ -524,179 +497,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#before-debugging" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Before Debugging
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Before Debugging">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#install-required-extensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install Required Extensions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-breakpoints-optionally" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Set Breakpoints (Optionally)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#start-debugging" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Start Debugging
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inspect-runtime-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Inspect Runtime Data
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Inspect Runtime Data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Variables
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#watch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Watch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#call-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Call Stack
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#disassembly" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Disassembly
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breakpoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Breakpoints
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rvbuilder-soc-registers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        RVBuilder SoC Registers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#memory-inspector" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Memory Inspector
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#serial-monitor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Serial Monitor
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -732,10 +532,35 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../mcp_for_AI/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use RVBuilder with AI Agents
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -751,6 +576,174 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#github-copilot-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Copilot Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub Copilot Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-and-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation and Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-github-copilot-chat-for-rvbuilder-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using GitHub Copilot Chat for RVBuilder Development
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codex-desktopcli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Codex Desktop/CLI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Codex Desktop/CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-and-setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation and Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-codex-for-rvbuilder-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Codex for RVBuilder Development
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claude-code-desktopcli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claude Code Desktop/CLI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Claude Code Desktop/CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-and-setup_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation and Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-claude-code-for-rvbuilder-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Claude Code for RVBuilder Development
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -775,151 +768,199 @@
   
 
 
-  <h1>Debug an Application</h1>
+  <h1>Use RVBuilder with AI Agents</h1>
 
-<p>This section describes how to debug applications for Andes RISC-V targets using RVBuilder in VS Code. It covers the preparations for a debug session, how to initiate and control a debug session, and the views to inspect program state and target status during debugging. </p>
-<h2 id="before-debugging">Before Debugging</h2>
-<h3 id="install-required-extensions">Install Required Extensions</h3>
-<p>RVBuilder leverages VS Code’s native debugging capabilities, together with additional extensions, to provide comprehensive debug support for Andes RISC-V targets. Before you start a debug session, search and install the following extensions required for debugging in the <strong>Extensions</strong> view:</p>
-<ul>
-<li>
-<p><strong>Eclipse CDT Cloud Memory Inspector</strong>: For monitoring and modifying memory values.<br><br />
-<img alt="Memory Inspector Extension" src="../images/memory_inspector_extension.png" /></p>
-</li>
-<li>
-<p><strong>Serial Monitor</strong>: For viewing outputs from serial ports.<br> 
-   <img alt="Serial Monitor Extension" src="../images/serial_monitor_extension.png" /></p>
-</li>
-</ul>
-<h3 id="set-breakpoints-optionally">Set Breakpoints (Optionally)</h3>
-<p>Set breakpoints to pause program execution and inspect the application at specific points. For how to set breakpoints in VS Code, see <a href="https://code.visualstudio.com/docs/debugtest/debugging#_breakpoints"><strong>Breakpoints</strong></a>. </p>
-<h2 id="start-debugging">Start Debugging</h2>
-<ol>
-<li>
-<p>Use either of the following ways to initiate a debug process of an RVBuilder project.</p>
-<ul>
-<li>
-<p>In the <strong>Explorer</strong> view, select the desired project, click "RVBuilder: Debug" on the project's drop-down menu and run the launch configuration for the project in the invoked command palette. </p>
-<p><img alt="project debug 1" src="../images/debug_from_project_drop_down.png" /></p>
-</li>
-<li>
-<p>In the <strong>Run and Debug</strong> view, select the launch configuration for the desired project from the combo box and click <img alt="Run and Debug icon" src="../images/run_and_debug_icon.png" /> to launch the debug session. </p>
-<p><img alt="project debug 2" src="../images/debug_from_run_and_debug.png" /></p>
-</li>
-</ul>
-</li>
-<li>
-<p>The debug session starts. </p>
-<ul>
-<li>
-<p>For ICE targets (AICE or Maverick targets), view debugging outputs from the <strong>Debug Console</strong> panel.
-    <img alt="debug console" src="../images/debug_console.png" /></p>
-</li>
-<li>
-<p>For simulator targets (Andes QEMU targets), view the output messages from a <strong>gdb-server</strong> terminal. 
-    <img alt="gdbserver terminal" src="../images/gdbserver-terminal.png" /></p>
-</li>
-</ul>
-</li>
-<li>
-<p>Use the <strong>Debug Toolbar</strong> to control the flow of the debug session, such as stepping through code or pausing execution. </p>
-<p><img alt="debug toolbar" src="../images/debug_toolbar.png" /> </p>
-<p>The available debug actions from the toolbar include</p>
+<p>RVBuilder provides Model Context Protocol (MCP) servers that enable AI agents to streamline Andes RISC-V project setup, improve configuration accuracy, automate development workflows, or assist in resolving development issues. The level of control available to AI agents depends on how the MCP servers are integrated. As shown below, AI agents such as GitHub Copilot, which directly interact with the MCP server integrated in RVBuilder, provides a higher level of automation across development workflow. In contrast, AI agents that communicate with the MCP server via standard input/output (STDIO), such as Codex or Claude Code, offer comparatively limited automation and primarily assist with project configuration and development queries.  </p>
 <table>
 <thead>
 <tr>
-<th>Action</th>
-<th>Description</th>
+<th>AI Agent</th>
+<th>MCP Integration Mode</th>
+<th>Capabilities for RVBuilder Projects</th>
+<th>Requires VS Code</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Continue/Pause</td>
-<td>&bull; Continue: Resume program execution.<br>&bull; Pause: Suspend program execution.</td>
+<td>GitHub Copilot Chat</td>
+<td>Integrated (in RVBuilder extension)</td>
+<td>Assistance with project creation/import, configuration, building, debugging, and  development queries</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>Step Over</td>
-<td>Execute the next statement without inspecting or following its component steps.</td>
+<td>Codex Desktop/CLI</td>
+<td>Standalone (STDIO via MCP server)</td>
+<td>Assistance with project configuration and development queries</td>
+<td>No</td>
 </tr>
 <tr>
-<td>Step Into</td>
-<td>Enter the next statement to follow its execution line-by-line.</td>
-</tr>
-<tr>
-<td>Step Out</td>
-<td>When inside a function, return to the earlier execution context.</td>
-</tr>
-<tr>
-<td>Restart</td>
-<td>Terminate the current program execution and start debugging again using the current configuration.</td>
-</tr>
-<tr>
-<td>Stop/Disconnect</td>
-<td>&bull; Stop: Terminate the current program execution.<br>&bull; Disconnect: Detach debugger from a core without changing the execution status (running/pause).</td>
+<td>Claude Code Desktop/CLI</td>
+<td>Standalone (STDIO via MCP server)</td>
+<td>Assistance with project configuration and development queries</td>
+<td>No</td>
 </tr>
 </tbody>
 </table>
+<p>This section outlines the requirements, installation, configuration, and usage of GitHub Copilot, Codex Desktop/CLI, and Claude Code Desktop/CLI for RVBuilder project development. </p>
+<h2 id="github-copilot-chat">GitHub Copilot Chat</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Visual Studio Code (version 1.9 or later) with the RVBuilder extension installed. For installation instructions of the RVBuilder extension, see <a href="../installation/"><strong>Install RVBuilder</strong></a>.</li>
+<li>A GitHub account with an active Copilot subscription or a Copilot free plan</li>
+</ul>
+<h3 id="installation-and-setup">Installation and Setup</h3>
+<ol>
+<li>In VS Code, click <img alt="Extension" src="../images/extension.png" /> in the <strong>Activity Bar</strong>.</li>
+<li>Search for the <strong>GitHub Copilot Chat</strong> extension and install it. Restart VS Code after the installation. <br> 
+ <img alt="GitHub Copilot Chat extension" src="../images/github_copilot_chat.png" /></li>
+<li>Open the <strong>Chat</strong> view (pressing Ctrl+Alt+I or clicking the <strong>Toggle Chat</strong> icon <img alt="Toggle chat" src="../images/toggle_chat.png" /> near the search bar). Follow the prompts to sign in with your GitHub account and authorize VS Code in the browser.  </li>
+</ol>
+<h3 id="using-github-copilot-chat-for-rvbuilder-development">Using GitHub Copilot Chat for RVBuilder Development</h3>
+<ol>
+<li>Open the <strong>Chat</strong> view in the VS Code with the RVBuilder extension installed. </li>
+<li>
+<p>Call <code>@rvbuilder</code> followed by your request or question for RVbuilder project development. GitHub Copilot supports automation for project creation/import, configuration, building, and debugging. For example, </p>
+<ul>
+<li>
+<p>Request to import a project <br />
+<code>@rvbuilder Import a demo from the RVbuilder package to the workspace</code></p>
 </li>
 <li>
-<p>During debugging, examine runtime information such as program variables, CPU/peripheral register values, and stack frames in the <strong>Run and Debug</strong> view. </p>
+<p>Query about project configuration  <br />
+<code>@rvbuilder Read the build settings of the project</code></p>
+</li>
+<li>
+<p>Request to modify project settings <br />
+<code>@rvbuilder Configure the project to improve performance</code></p>
+</li>
+<li>
+<p>Request to build and debug the project  <br />
+<code>@rvbuilder Start debugging and show CPU register values after the program suspends</code></p>
+</li>
+</ul>
 </li>
 </ol>
-<h2 id="inspect-runtime-data">Inspect Runtime Data</h2>
-<p>In a debug session, you can monitor the real-time state of your application and target across various sections of the <strong>Run and Debug</strong> view and other debugger-related views.</p>
-<h3 id="variables">Variables</h3>
-<p>The <strong>Variables</strong> section displays the current values of program variables at the active stack frame. It is organized into the following parts:</p>
+<h2 id="codex-desktopcli">Codex Desktop/CLI</h2>
+<h3 id="prerequisites_1">Prerequisites</h3>
 <ul>
+<li>Codex Desktop or CLI</li>
+<li>Existing RVBuilder project(s) </li>
+</ul>
+<h3 id="installation-and-setup_1">Installation and Setup</h3>
+<ol>
 <li>
-<p><strong>Local</strong>: Shows variables defined within the current function.</p>
+<p>Download the RVBuilder MCP package <code>mcp-package.zip</code> from the
+<a href="https://github.com/andestech/RVBuilder/releases/tag/v1.0.0-mcp-package"><strong>RVBuilder MCP</strong></a> release page and extract it to a desired directory (e.g. <code>D:/mcp-package</code>). The package contains the following components required for Codex to serve as an RVBuilder AI assistant:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mcp-package/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> ├── dist/
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> │      └── mcp-server.js # Standalone MCP server 
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> ├── AGENTS.md            # System prompt for Codex 
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a> └── resource/
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        └── mcp/          # Folder of skill prompts 
+</span></code></pre></div></p>
 </li>
 <li>
-<p><strong>Global</strong>: Shows variables accessible throughout the program.</p>
+<p>Install <code>Node.js</code> (version 1.8 or later) from the official <a href="https://nodejs.org/en/download"><strong>Node.js Download</strong></a> page. Verify that both <code>Node.js</code> and <code>npm</code> are successfully installed and accessible: </p>
+<p><code>node -v</code> <br>
+<code>npm -v</code></p>
 </li>
 <li>
-<p><strong>Static</strong>: Shows variables that retain their value between function calls.</p>
+<p>Install the Codex Desktop app from the <a href="https://openai.com/zh-Hant/codex/"><strong>OpenAI Codex App</strong></a> page or install the Codex CLI using: <br>
+   <code>npm install -g @openai/codex</code></p>
+</li>
+</ol>
+<h3 id="using-codex-for-rvbuilder-development">Using Codex for RVBuilder Development</h3>
+<ol>
+<li>
+<p>Open Codex Desktop or CLI, specify an RVBuilder project (e.g., D:/my-project).</p>
+<ul>
+<li>In the Codex Desktop app, select the project folder.</li>
+<li>In the Codex CLI, change the working directory to the project folder. </li>
+</ul>
 </li>
 <li>
-<p><strong>Registers</strong>: Shows CPU registers used during program execution.</p>
+<p>Copy <code>AGENTS.md</code> from the extracted MCP package to the working project directory. For example,<br>
+    <code>cp D:/mcp-package/AGENTS.md D:/my-project/</code> </p>
+</li>
+<li>
+<p>Configure Codex to use the standalone MCP server from the extracted RVBuilderMCP package by editing the user config <code>~/.codex/config.toml</code> and adding a section as follows: 
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[mcp_servers.rvbuilder]
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>command = &quot;node&quot;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>args = [&quot;D:/mcp-package/dist/mcp-server.js&quot;]
+</span></code></pre></div></p>
+<p>For Codex Desktop app, you can alternatively configure the MCP server in "Settings &gt; MCP servers". Add an RVBuilder MCP server and set its path to the standalone RVBuilder MCP server. <br> </p>
+<p>Restart the Codex Desktop app or CLI after the configuration. <br></p>
+</li>
+<li>
+<p>Use Codex to assist with RVBuilder project development. Codex primarily supports project configuration tasks and provides guidance for development queries.</p>
+<ul>
+<li>In the Codex Desktop app, enter your request or question in the prompt box.</li>
+<li>In the Codex CLI, run <code>codex</code> followed by your request or requests. For example,<br><ul>
+<li><code>Codex List the current compiler and linker options for the project.</code> </li>
+<li><code>Codex Change the compiler from GCC to Clang.</code></li>
+</ul>
 </li>
 </ul>
-<p>Variable values in the section are updated automatically during debugging. You can right-click a variable or CPU register in the section and select "Set Value" to edit its value. </p>
-<p><img alt="Variables" src="../images/variables.png" /> </p>
-<h3 id="watch">Watch</h3>
-<p>The <strong>Watch</strong> section allows you to evaluate and watch variables and expressions. To watch a variable or expression, use either of the following methods:</p>
+</li>
+</ol>
+<h2 id="claude-code-desktopcli">Claude Code Desktop/CLI</h2>
+<h3 id="prerequisites_2">Prerequisites</h3>
 <ul>
-<li>
-<p>Click the + icon in the title bar of the <strong>Watch</strong> section and enter the expression name. </p>
-</li>
-<li>
-<p>Right-click a variable or expression in the code editor and select "Add to Watch". </p>
-</li>
-<li>
-<p>Right-click a variable within the <strong>Variables</strong> section and select "Add to Watch".</p>
-</li>
+<li>Claude Code Desktop or CLI</li>
+<li>Existing RVBuilder project(s)</li>
 </ul>
-<p><img alt="Watch Section" src="../images/watch_section.png" /> </p>
-<h3 id="call-stack">Call Stack</h3>
-<p>The <strong>Call Stack</strong> section shows the hierarchy of active function calls at the current execution point. It displays the current function when the execution paused, the call sequence to reach the current state, and the associated source files and line numbers. Selecting a different stack frame in the section allows you to jump to the corresponding line in the source code and updates data in the <strong>Variables</strong> section to reflect the context of that frame.</p>
-<p><img alt="Call Stack" src="../images/call_stack.png" /> </p>
-<h3 id="disassembly">Disassembly</h3>
-<p>The <strong>Disassembly</strong> view displays the machine instructions for the selected stack frame or current program counter (PC). It shows the instruction address, the function symbol with offset, the opcode/decoded assembly mnemonic, and marks the current PC with a highlighted row. You can view disassembled instructions alongside source code and step through them for detailed program analysis. To open the view, right-click a stack frame in the <strong>Call Stack</strong> section and select "Open Disassembly View". </p>
-<p><img alt="Disassembly" src="../images/disassembly.png" /> </p>
-<h3 id="breakpoints">Breakpoints</h3>
-<p>The <strong>Breakpoint</strong> section displays all breakpoints set in your code. You can manage breakpoints directly in this section by enabling, disabling, or removing them as needed.</p>
-<p><img alt="Breakpoint" src="../images/breakpoint.png" /> </p>
-<h3 id="rvbuilder-soc-registers">RVBuilder SoC Registers</h3>
-<p>The <strong>RVBuilder SoC Registers</strong> section displays the runtime status of System-on-a-Chip (SoC) registers for RVBuilder projects. These registers are organized hierarchically by peripheral, with each entry showing the base address, register offset, and current value. Bit fields are also decoded for easier inspection. SoC register values are updated during debugging, allowing direct observation and verification of peripheral states.</p>
-<p><img alt="SoC Registers" src="../images/soc_registers.png" /> </p>
-<h3 id="memory-inspector">Memory Inspector</h3>
-<p>The <strong>Memory Inspector</strong> view is available after installing the <strong>Eclipse CDT Cloud Memory Inspector</strong> extension. It enables inspection of memory regions on a target in a debug session. You can navigate to a specified memory address, view memory data in various formats, adjust display settings, and modify memory content if needed. </p>
-<p>To open the view, press F1 and run "Memory: Show Memory Inspector" from the command palette, or right-click a variable in the <strong>Variables</strong> section and select "Show in Memory Inspector".</p>
-<p><img alt="Memory Inspector" src="../images/memory_inspector.png" /> </p>
-<h3 id="serial-monitor">Serial Monitor</h3>
-<p>The <strong>Serial Monitor</strong> terminal is available after installing the <strong>Serial Monitor</strong> extension. It provides real-time monitoring of serial or TCP outputs from your application during execution.</p>
-<p><img alt="Serial Monitor" src="../images/serial_monitor.png" /> </p>
-<p>For Andes RISC-V ICE targets, select <strong>Serial</strong> as the monitor mode, specify the serial port and baud rate, and click the <strong>Start Monitoring</strong> button to establish the serial connection and view outputs from the target. Then, click the <strong>Stop Monitoring</strong> button to end the monitoring session.  </p>
-<p>For Andes RISC-V simulator targets (connected via Andes QEMU), select <strong>TCP</strong> as the monitor mode, set <strong>Host</strong> to <code>localhost</code>, and enter the TCP port number corresponding to UART2 before clicking <strong>Start Monitoring</strong>. The UART2 TCP port number can be obtained from the first TCP port displayed in the QEMU target connection log (e.g., <code>9901</code> in the example below.) 
- <img alt="QEMU UART2 Port Number" src="../images/qemu_uart2_port.png" /> </p>
+<h3 id="installation-and-setup_2">Installation and Setup</h3>
+<ol>
+<li>
+<p>Download the RVBuilder MCP package <code>mcp-package.zip</code> from the <a href="https://github.com/andestech/RVBuilder/releases/tag/v1.0.0-mcp-package"><strong>RVBuilder MCP</strong></a> release page and extract it to a desired directory (e.g., <code>D:/mcp-package</code>). The package contains the following components required for Claude Code to serve as an RVBuilder AI assistant:<br />
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mcp-package/
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a> ├── dist/
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a> │      └── mcp-server.js # Standalone MCP server 
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a> ├── CLAUDE.md            # System prompt for Claude Code 
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a> └── resource/
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        └── mcp/          # Folder of skill prompts 
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Install <code>Node.js</code> (version 1.8 or later) from the official <a href="https://nodejs.org/en/download"><strong>Node.js Download</strong></a> page. Verify that both <code>Node.js</code> and <code>npm</code> are successfully installed and accessible: </p>
+<p><code>node -v</code> <br>
+<code>npm -v</code></p>
+</li>
+<li>
+<p>Install the Claude Code globally. </p>
+</li>
+</ol>
+<p><code>npm install -g @anthropic-ai/claude-code</code> </p>
+<div class="language-text highlight"><pre><span></span><code>To use the Claude Code Desktop app, download and install it from the [**Claude Download**](https://claude.ai/downloads) page then.
+</code></pre></div>
+<h3 id="using-claude-code-for-rvbuilder-development">Using Claude Code for RVBuilder Development</h3>
+<ol>
+<li>Open Claude Code Desktop or CLI, specify an RVBuilder project (e.g., D:/my-project).</li>
+<li>In the Claude Code Desktop app, select the project folder.</li>
+<li>
+<p>In the Claude Code CLI, change the working directory to the project folder. </p>
+</li>
+<li>
+<p>Copy <code>CLAUDE.md</code> from the extracted MCP package to the working project directory. For example,<br>
+    <code>copy D:/mcp-package/CLAUDE.md D:/my-project/</code> </p>
+</li>
+<li>
+<p>Register the standalone MCP server in the extracted RVBuilder MCP package for the project.<br>
+    <code>claude mcp add -s local rvbuilder node "D:/mcp-package/dist/mcp-server.js"</code></p>
+</li>
+<li>
+<p>Use Claude Code to assist with your RVBuilder development. Claude Code primarily supports project configuration tasks and provides guidance for development queries.</p>
+</li>
+<li>
+<p>In the Claude Code Desktop app, enter your request or question in the prompt box.</p>
+</li>
+<li>In the Claude Code CLI, run <code>claude</code> followed by your request or requests. For example,<br><ul>
+<li><code>Claude Change the project target to ADP-AE350-A45 and update build settings</code> <br></li>
+<li><code>Claude Enable DSP for my project</code></li>
+<li><code>Claude What are the issues that might cause build failures?</code></li>
+</ul>
+</li>
+</ol>
 
 
 
