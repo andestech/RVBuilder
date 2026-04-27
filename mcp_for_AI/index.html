@@ -603,10 +603,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Requirements
       
     </span>
   </a>
@@ -625,10 +625,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-github-copilot-chat-for-rvbuilder-development" class="md-nav__link">
+  <a href="#rvbuilder-development-with-github-copilot-chat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using GitHub Copilot Chat for RVBuilder Development
+        RVBuilder Development with GitHub Copilot Chat
       
     </span>
   </a>
@@ -641,22 +641,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#codex-desktopcli" class="md-nav__link">
+  <a href="#codex" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Codex Desktop/CLI
+        Codex
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Codex Desktop/CLI">
+    <nav class="md-nav" aria-label="Codex">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prerequisites_1" class="md-nav__link">
+  <a href="#requirements_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Requirements
       
     </span>
   </a>
@@ -675,10 +675,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-codex-for-rvbuilder-development" class="md-nav__link">
+  <a href="#rvbuilder-development-with-codex-cli" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using Codex for RVBuilder Development
+        RVBuilder Development with Codex CLI
       
     </span>
   </a>
@@ -691,22 +691,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#claude-code-desktopcli" class="md-nav__link">
+  <a href="#claude-code" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Claude Code Desktop/CLI
+        Claude Code
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Claude Code Desktop/CLI">
+    <nav class="md-nav" aria-label="Claude Code">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prerequisites_2" class="md-nav__link">
+  <a href="#requirements_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Requirements
       
     </span>
   </a>
@@ -725,10 +725,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-claude-code-for-rvbuilder-development" class="md-nav__link">
+  <a href="#rvbuilder-development-with-claude-code-cli" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using Claude Code for RVBuilder Development
+        RVBuilder Development with Claude Code CLI
       
     </span>
   </a>
@@ -770,7 +770,51 @@
 
   <h1>Use RVBuilder with AI Agents</h1>
 
-<p>RVBuilder provides Model Context Protocol (MCP) servers that enable AI agents to streamline Andes RISC-V project setup, improve configuration accuracy, automate development workflows, or assist in resolving development issues. The level of control available to AI agents depends on how the MCP servers are integrated. As shown below, AI agents such as GitHub Copilot, which directly interact with the MCP server integrated in RVBuilder, provides a higher level of automation across development workflow. In contrast, AI agents that communicate with the MCP server via standard input/output (STDIO), such as Codex or Claude Code, offer comparatively limited automation and primarily assist with project configuration and development queries.  </p>
+<p>RVBuilder provides Model Context Protocol (MCP) servers that enable AI agents to streamline Andes RISC-V project setup, improve configuration accuracy, automate development workflows, and assist in resolving development issues.</p>
+<p>These MCP servers expose a set of resource primitives, as shown below, that supply domain-specific reference knowledge for AI-assisted RVBuilder workflows. When handling requests or queries related to compiler options, linker scripts, debugger commands, or general RVBuilder project configuration, these resources provide the necessary context to generate accurate and relevant responses.</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Domain Knowledge / Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rvbuilder-json</code></td>
+<td>Target and connection settings</td>
+</tr>
+<tr>
+<td><code>rvbuilder-examples</code></td>
+<td>Practical workflow examples</td>
+</tr>
+<tr>
+<td><code>gcc-riscv</code></td>
+<td>GCC/G++ compiler options for RISC-V and Andes extensions</td>
+</tr>
+<tr>
+<td><code>clang-riscv</code></td>
+<td>LLVM Clang compiler options for RISC-V</td>
+</tr>
+<tr>
+<td><code>gnu-ld-riscv</code></td>
+<td>GNU Linker (ld) options, linker scripts, relaxation</td>
+</tr>
+<tr>
+<td><code>binutils-riscv</code></td>
+<td>GNU Binutils (as, ar, objdump, objcopy, readelf, nm, size)</td>
+</tr>
+<tr>
+<td><code>gdb-riscv</code></td>
+<td>GDB debugger commands</td>
+</tr>
+<tr>
+<td><code>openocd-riscv</code></td>
+<td>OpenOCD/ICEman debug server setup and JTAG configuration</td>
+</tr>
+</tbody>
+</table>
+<p>The level of control available to AI agents depends on how the MCP servers are integrated. As shown below, AI agents such as GitHub Copilot, which directly interact with the MCP server integrated in RVBuilder, provides a higher level of automation across development workflow. In contrast, AI agents that communicate with the MCP server via standard input/output (STDIO), such as Codex or Claude Code, offer comparatively limited automation and primarily assist with project configuration and development queries.  </p>
 <table>
 <thead>
 <tr>
@@ -801,12 +845,13 @@
 </tr>
 </tbody>
 </table>
-<p>This section outlines the requirements, installation, configuration, and usage of GitHub Copilot, Codex Desktop/CLI, and Claude Code Desktop/CLI for RVBuilder project development. </p>
+<p>This section outlines the requirements, installation, configuration, and usage of GitHub Copilot, Codex Desktop/CLI, and Claude Code Desktop/CLI for RVBuilder project development. Note that while RVBuilder workflows support both Linux and Windows environments, the instructions for Codex/Claude Code-assisted workflows below primarily use a Windows environment with PowerShell and AI CLI as examples.</p>
 <h2 id="github-copilot-chat">GitHub Copilot Chat</h2>
-<h3 id="prerequisites">Prerequisites</h3>
+<h3 id="requirements">Requirements</h3>
 <ul>
-<li>Visual Studio Code (version 1.9 or later) with the RVBuilder extension installed. For installation instructions of the RVBuilder extension, see <a href="../installation/"><strong>Install RVBuilder</strong></a>.</li>
-<li>A GitHub account with an active Copilot subscription or a Copilot free plan</li>
+<li>Visual Studio Code (version 1.116 or later) with the RVBuilder extension installed. For installation instructions of the RVBuilder extension, see <a href="../installation/"><strong>Install RVBuilder</strong></a>.</li>
+<li>GitHub Copilot Chat extension (version 0.41 or later)</li>
+<li>A GitHub account with an active Copilot subscription or a Copilot Free plan. </li>
 </ul>
 <h3 id="installation-and-setup">Installation and Setup</h3>
 <ol>
@@ -815,7 +860,7 @@
  <img alt="GitHub Copilot Chat extension" src="../images/github_copilot_chat.png" /></li>
 <li>Open the <strong>Chat</strong> view (pressing Ctrl+Alt+I or clicking the <strong>Toggle Chat</strong> icon <img alt="Toggle chat" src="../images/toggle_chat.png" /> near the search bar). Follow the prompts to sign in with your GitHub account and authorize VS Code in the browser.  </li>
 </ol>
-<h3 id="using-github-copilot-chat-for-rvbuilder-development">Using GitHub Copilot Chat for RVBuilder Development</h3>
+<h3 id="rvbuilder-development-with-github-copilot-chat">RVBuilder Development with GitHub Copilot Chat</h3>
 <ol>
 <li>Open the <strong>Chat</strong> view in the VS Code with the RVBuilder extension installed. </li>
 <li>
@@ -840,126 +885,135 @@
 </ul>
 </li>
 </ol>
-<h2 id="codex-desktopcli">Codex Desktop/CLI</h2>
-<h3 id="prerequisites_1">Prerequisites</h3>
+<h2 id="codex">Codex</h2>
+<h3 id="requirements_1">Requirements</h3>
 <ul>
-<li>Codex Desktop or CLI</li>
+<li>Codex Desktop (version 26.421.11020 or later) or Codex CLI (version 0.122.0 or later)</li>
+<li><code>Node.js</code> (version 18 or later)</li>
 <li>Existing RVBuilder project(s) </li>
 </ul>
 <h3 id="installation-and-setup_1">Installation and Setup</h3>
 <ol>
 <li>
-<p>Download the RVBuilder MCP package <code>mcp-package.zip</code> from the
-<a href="https://github.com/andestech/RVBuilder/releases/tag/v1.0.0-mcp-package"><strong>RVBuilder MCP</strong></a> release page and extract it to a desired directory (e.g. <code>D:/mcp-package</code>). The package contains the following components required for Codex to serve as an RVBuilder AI assistant:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mcp-package/
+<p>Download the RVBuilder MCP package <code>rvbuilder-mcp.zip</code> from the
+<a href="https://github.com/andestech/RVBuilder/releases/tag/v1.0.0-rvbuilder-mcp"><strong>RVBuilder MCP</strong></a> release page and extract it to a desired directory (e.g. <code>D:/rvbuilder-mcp</code>). The package contains the following components required for Codex to serve as an RVBuilder AI assistant:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>rvbuilder-mcp/
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> ├── dist/
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> │      └── mcp-server.js # Standalone MCP server 
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> │      └── mcp-server.js # Standalone RVBuilder MCP server 
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> ├── AGENTS.md            # System prompt for Codex 
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a> └── resource/
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        └── mcp/          # Folder of skill prompts 
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        └── mcp/          # Folder of prompt and resource skills 
 </span></code></pre></div></p>
 </li>
 <li>
-<p>Install <code>Node.js</code> (version 1.8 or later) from the official <a href="https://nodejs.org/en/download"><strong>Node.js Download</strong></a> page. Verify that both <code>Node.js</code> and <code>npm</code> are successfully installed and accessible: </p>
+<p>Install <code>Node.js</code> from the official <a href="https://nodejs.org/en/download"><strong>Node.js Download</strong></a> page. Ensure that the installed version is 18 or later, and verify that both <code>Node.js</code> and <code>npm</code> are successfully installed and accessible:</p>
 <p><code>node -v</code> <br>
 <code>npm -v</code></p>
 </li>
 <li>
-<p>Install the Codex Desktop app from the <a href="https://openai.com/zh-Hant/codex/"><strong>OpenAI Codex App</strong></a> page or install the Codex CLI using: <br>
+<p>Install the Codex CLI using: <br>
    <code>npm install -g @openai/codex</code></p>
 </li>
+<li>
+<p>Set up the RVBuilder system prompt for Codex. </p>
+<ul>
+<li>
+<p>If a global <code>AGENTS.md</code> does not exist in <code>$HOME/.codex/</code>, copy <code>AGENTS.md</code> from the extracted RVBuilder MCP package to the user Codex directory. </p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># Powershell</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">Copy-Item</span> <span class="n">D</span><span class="p">:/</span><span class="n">rvbuilder-mcp</span><span class="p">/</span><span class="n">AGENTS</span><span class="p">.</span><span class="nb">md </span><span class="n">-Destination</span> <span class="nv">$HOME</span><span class="p">/.</span><span class="n">codex</span><span class="p">/</span><span class="n">AGENTS</span><span class="p">.</span><span class="nb">md </span>
+</span></code></pre></div>
+</li>
+<li>
+<p>If a global <code>AGENTS.md</code> already exists in <code>$HOME/.codex/</code>, append the RVBuilder system prompt to the existing file. </p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c"># Powershell</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">Get-Content</span> <span class="n">D</span><span class="p">:/</span><span class="n">rvbuilder-mcp</span><span class="p">/</span><span class="n">AGENTS</span><span class="p">.</span><span class="nb">md </span><span class="p">|</span> <span class="nb">Add-Content</span> <span class="nv">$HOME</span><span class="p">/.</span><span class="n">codex</span><span class="p">/</span><span class="n">AGENTS</span><span class="p">.</span><span class="nb">md </span>
+</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Edit the user configuration file <code>$HOME/.codex/config.toml</code> and add a section as follows to configure Codex to use the standalone MCP server from the extracted RVBuilderMCP package:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[mcp_servers.rvbuilder]
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>command = &quot;node&quot;
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>args = [&quot;D:/rvbuilder-mcp/dist/mcp-server.js&quot;]
+</span></code></pre></div></p>
+<p>Restart the Codex CLI after the configuration. <br></p>
+</li>
 </ol>
-<h3 id="using-codex-for-rvbuilder-development">Using Codex for RVBuilder Development</h3>
+<h3 id="rvbuilder-development-with-codex-cli">RVBuilder Development with Codex CLI</h3>
 <ol>
 <li>
-<p>Open Codex Desktop or CLI, specify an RVBuilder project (e.g., D:/my-project).</p>
-<ul>
-<li>In the Codex Desktop app, select the project folder.</li>
-<li>In the Codex CLI, change the working directory to the project folder. </li>
-</ul>
+<p>Change the working directory to the desired RVBuilder project (e.g., D:/my-project).</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c"># Powershell</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">cd </span><span class="n">D</span><span class="p">:/</span><span class="n">my-project</span>
+</span></code></pre></div>
 </li>
 <li>
-<p>Copy <code>AGENTS.md</code> from the extracted MCP package to the working project directory. For example,<br>
-    <code>cp D:/mcp-package/AGENTS.md D:/my-project/</code> </p>
-</li>
-<li>
-<p>Configure Codex to use the standalone MCP server from the extracted RVBuilderMCP package by editing the user config <code>~/.codex/config.toml</code> and adding a section as follows: 
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[mcp_servers.rvbuilder]
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>command = &quot;node&quot;
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>args = [&quot;D:/mcp-package/dist/mcp-server.js&quot;]
-</span></code></pre></div></p>
-<p>For Codex Desktop app, you can alternatively configure the MCP server in "Settings &gt; MCP servers". Add an RVBuilder MCP server and set its path to the standalone RVBuilder MCP server. <br> </p>
-<p>Restart the Codex Desktop app or CLI after the configuration. <br></p>
-</li>
-<li>
-<p>Use Codex to assist with RVBuilder project development. Codex primarily supports project configuration tasks and provides guidance for development queries.</p>
-<ul>
-<li>In the Codex Desktop app, enter your request or question in the prompt box.</li>
-<li>In the Codex CLI, run <code>codex</code> followed by your request or requests. For example,<br><ul>
-<li><code>Codex List the current compiler and linker options for the project.</code> </li>
-<li><code>Codex Change the compiler from GCC to Clang.</code></li>
-</ul>
-</li>
-</ul>
+<p>Run <code>codex</code> followed by your request or question. Codex primarily supports project configuration tasks and provides guidance for development queries. For example,<br>
+        - <code>codex</code> <code>List the current compiler and linker options for the project.</code> <br>
+        - <code>codex</code> <code>Change the compiler from GCC to Clang.</code></p>
 </li>
 </ol>
-<h2 id="claude-code-desktopcli">Claude Code Desktop/CLI</h2>
-<h3 id="prerequisites_2">Prerequisites</h3>
+<h2 id="claude-code">Claude Code</h2>
+<h3 id="requirements_2">Requirements</h3>
 <ul>
-<li>Claude Code Desktop or CLI</li>
+<li>Claude Code Desktop (version 1.3883.0 or later) or Claude Code CLI (version 2.1.112 or later)</li>
+<li><code>Node.js</code> (version 18 or later)</li>
 <li>Existing RVBuilder project(s)</li>
 </ul>
 <h3 id="installation-and-setup_2">Installation and Setup</h3>
 <ol>
 <li>
-<p>Download the RVBuilder MCP package <code>mcp-package.zip</code> from the <a href="https://github.com/andestech/RVBuilder/releases/tag/v1.0.0-mcp-package"><strong>RVBuilder MCP</strong></a> release page and extract it to a desired directory (e.g., <code>D:/mcp-package</code>). The package contains the following components required for Claude Code to serve as an RVBuilder AI assistant:<br />
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mcp-package/
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a> ├── dist/
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a> │      └── mcp-server.js # Standalone MCP server 
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a> ├── CLAUDE.md            # System prompt for Claude Code 
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a> └── resource/
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        └── mcp/          # Folder of skill prompts 
+<p>Download the RVBuilder MCP package <code>rvbuilder-mcp.zip</code> from the <a href="https://github.com/andestech/RVBuilder/releases/tag/v1.0.0-rvbuilder-mcp"><strong>RVBuilder MCP</strong></a> release page and extract it to a desired directory (e.g., <code>D:/rvbuilder-mcp</code>). The package contains the following components required for Claude Code to serve as an RVBuilder AI assistant:<br />
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>rvbuilder-mcp/
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a> ├── dist/
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a> │      └── mcp-server.js # Standalone RVBuilder MCP server 
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a> ├── CLAUDE.md            # System prompt for Claude Code 
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a> └── resource/
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        └── mcp/          # Folder of prompt and resource skills 
 </span></code></pre></div></p>
 </li>
 <li>
-<p>Install <code>Node.js</code> (version 1.8 or later) from the official <a href="https://nodejs.org/en/download"><strong>Node.js Download</strong></a> page. Verify that both <code>Node.js</code> and <code>npm</code> are successfully installed and accessible: </p>
+<p>Install <code>Node.js</code> from the official <a href="https://nodejs.org/en/download"><strong>Node.js Download</strong></a> page. Ensure that the installed version is 18 or later, and verify that both <code>Node.js</code> and <code>npm</code> are successfully installed and accessible:</p>
 <p><code>node -v</code> <br>
 <code>npm -v</code></p>
 </li>
 <li>
 <p>Install the Claude Code globally. </p>
+<p><code>npm install -g @anthropic-ai/claude-code</code> <br></p>
+</li>
+<li>
+<p>Set up the RVBuilder system prompt for Claude Code.<br></p>
+<ul>
+<li>If a global <code>CLAUDE.md</code> does not exist, copy <code>CLAUDE.md</code> from the extracted RVBuilder MCP package to the user Claude directory. <br>
+   <div class="language-powershell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c"># Powershell</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">Copy-Item</span> <span class="n">D</span><span class="p">:/</span><span class="n">rvbuilder-mcp</span><span class="p">/</span><span class="n">CLAUDE</span><span class="p">.</span><span class="nb">md </span><span class="n">-Destination</span> <span class="nv">$HOME</span><span class="p">/.</span><span class="n">claude</span><span class="p">/</span><span class="n">CLAUDE</span><span class="p">.</span><span class="nb">md </span>
+</span></code></pre></div></li>
+<li>If a global <code>CLAUDE.md</code> exists in <code>$HOME/.claude/</code>, append the RVBuilder system prompt to the existing file. <br>
+   <div class="language-powershell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c"># Powershell</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">Get-Content</span> <span class="n">D</span><span class="p">:/</span><span class="n">rvbuilder-mcp</span><span class="p">/</span><span class="n">CLAUDE</span><span class="p">.</span><span class="nb">md </span><span class="p">|</span> <span class="nb">Add-Content</span> <span class="nv">$HOME</span><span class="p">/.</span><span class="n">claude</span><span class="p">/</span><span class="n">CLAUDE</span><span class="p">.</span><span class="nb">md </span>
+</span></code></pre></div></li>
+</ul>
 </li>
 </ol>
-<p><code>npm install -g @anthropic-ai/claude-code</code> </p>
-<div class="language-text highlight"><pre><span></span><code>To use the Claude Code Desktop app, download and install it from the [**Claude Download**](https://claude.ai/downloads) page then.
-</code></pre></div>
-<h3 id="using-claude-code-for-rvbuilder-development">Using Claude Code for RVBuilder Development</h3>
+<h3 id="rvbuilder-development-with-claude-code-cli">RVBuilder Development with Claude Code CLI</h3>
 <ol>
-<li>Open Claude Code Desktop or CLI, specify an RVBuilder project (e.g., D:/my-project).</li>
-<li>In the Claude Code Desktop app, select the project folder.</li>
 <li>
-<p>In the Claude Code CLI, change the working directory to the project folder. </p>
-</li>
-<li>
-<p>Copy <code>CLAUDE.md</code> from the extracted MCP package to the working project directory. For example,<br>
-    <code>copy D:/mcp-package/CLAUDE.md D:/my-project/</code> </p>
+<p>Change the working directory to the desired RVBuilder project (e.g., D:/my-project).</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c"># Powershell</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">cd </span><span class="n">D</span><span class="p">:/</span><span class="n">my-project</span>
+</span></code></pre></div>
 </li>
 <li>
 <p>Register the standalone MCP server in the extracted RVBuilder MCP package for the project.<br>
-    <code>claude mcp add -s local rvbuilder node "D:/mcp-package/dist/mcp-server.js"</code></p>
+    <div class="language-powershell highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c"># Powershell</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">claude</span> <span class="n">mcp</span> <span class="n">add</span> <span class="n">-s</span> <span class="n">local</span> <span class="n">rvbuilder</span> <span class="n">node</span> <span class="s2">&quot;D:/rvbuilder-mcp/dist/mcp-server.js&quot;</span>
+</span></code></pre></div></p>
 </li>
-<li>
-<p>Use Claude Code to assist with your RVBuilder development. Claude Code primarily supports project configuration tasks and provides guidance for development queries.</p>
-</li>
-<li>
-<p>In the Claude Code Desktop app, enter your request or question in the prompt box.</p>
-</li>
-<li>In the Claude Code CLI, run <code>claude</code> followed by your request or requests. For example,<br><ul>
-<li><code>Claude Change the project target to ADP-AE350-A45 and update build settings</code> <br></li>
-<li><code>Claude Enable DSP for my project</code></li>
-<li><code>Claude What are the issues that might cause build failures?</code></li>
-</ul>
-</li>
+<li>Run <code>claude</code> followed by your request or question. Claude Code primarily supports project configuration tasks and provides guidance for development queries. For example,<br>
+        - <code>claude</code> <code>Change the project target to ADP-AE350-A45 and update build settings</code> <br>
+        - <code>claude</code> <code>Enable DSP for my project</code><br>
+        - <code>claude</code> <code>What are the issues that might cause build failures?</code></li>
 </ol>
 
 
